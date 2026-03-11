@@ -100,10 +100,10 @@ int OpportunisticSecureSMTPClient::sendMail(const jed_utils::Message &pMsg) {
     return jed_utils::OpportunisticSecureSMTPClient::sendMail(pMsg);
 }
 
-const char* OpportunisticSecureSMTPClient::getHostName() const {
+std::string OpportunisticSecureSMTPClient::getHostName() const {
     return jed_utils::OpportunisticSecureSMTPClient::getHostName();
 }
 
-void OpportunisticSecureSMTPClient::setHostName(const char* pHostName) {
-    jed_utils::OpportunisticSecureSMTPClient::setHostName(pHostName);
+void OpportunisticSecureSMTPClient::setHostName(const std::string &pHostName) {
+    jed_utils::OpportunisticSecureSMTPClient::setHostName(pHostName.c_str());
 }
