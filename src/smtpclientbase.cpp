@@ -108,7 +108,7 @@ SMTPClientBase::~SMTPClientBase() {
 SMTPClientBase::SMTPClientBase(const SMTPClientBase& other)
     : mIsConnected(false),
       mServerName(new char[strlen(other.mServerName) + 1]),
-      mHostName(new char[strlen(other.mHostName) + 1])
+      mHostName(new char[strlen(other.mHostName) + 1]),
       mPort(other.mPort),
       mBatchMode(other.mBatchMode),
       mCommunicationLog(other.mCommunicationLog != nullptr ? new char[strlen(other.mCommunicationLog) + 1]: nullptr),
@@ -200,7 +200,7 @@ SMTPClientBase& SMTPClientBase::operator=(const SMTPClientBase& other) {
 SMTPClientBase::SMTPClientBase(SMTPClientBase&& other) noexcept
     : mIsConnected(other.mIsConnected),
       mServerName(other.mServerName),
-      mHostName(other.mHostName)
+      mHostName(other.mHostName),
       mPort(other.mPort),
       mBatchMode(other.mBatchMode),
       mCommunicationLog(other.mCommunicationLog),
