@@ -104,6 +104,6 @@ const char* OpportunisticSecureSMTPClient::getHostName() const {
     return jed_utils::OpportunisticSecureSMTPClient::getHostName();
 }
 
-void OpportunisticSecureSMTPClient::pHostName(const char* pHostName) {
-    jed_utils::OpportunisticSecureSMTPClient::pHostName(pHostName);
+void OpportunisticSecureSMTPClient::setHostName(const char* pHostName) {
+    jed_utils::OpportunisticSecureSMTPClient::setHostName(pHostName);
 }
